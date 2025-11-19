@@ -39,6 +39,7 @@ header h1 {
     width: 100%;
     max-width: 300px; /* تحديد أقصى عرض للعنصر */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding-bottom: 1px; /* لإضافة مساحة أسفل الرابط */
 }
 
 .sport-item:hover {
@@ -63,9 +64,28 @@ header h1 {
 }
 
 .sport-item p {
-    padding: 0 15px 15px;
+    padding: 0 15px;
     margin: 0;
     line-height: 1.6;
+}
+
+/* تنسيق الرابط الإضافي */
+.sport-item a.more-info {
+    display: block; /* لجعل الرابط يأخذ سطر كامل */
+    text-align: center;
+    padding: 10px 15px;
+    margin: 15px 15px 15px;
+    background-color: #ffc107; /* لون أصفر جذاب */
+    color: #333;
+    text-decoration: none; /* إزالة الخط تحت النص */
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.sport-item a.more-info:hover {
+    background-color: #e0a800; /* لون أغمق عند المرور بالماوس */
+    color: white;
 }
 
 /* تنسيق التذييل (Footer) */
