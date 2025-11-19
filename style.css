@@ -24,26 +24,26 @@ header h1 {
 /* تنسيق معرض الصور (Gallery) */
 .gallery {
     display: flex;
-    flex-wrap: wrap; /* للسماح للعناصر بالنزول إلى سطر جديد */
-    justify-content: center; /* توسيط العناصر في المنتصف */
-    gap: 30px; /* المسافة بين عناصر المعرض */
+    flex-wrap: wrap; 
+    justify-content: center; 
+    gap: 30px; 
     padding: 30px;
 }
 
-/* تنسيق كل عنصر رياضي */
+/* تنسيق كل عنصر رياضي (المربعات البيضاء) */
 .sport-item {
     background-color: white;
     border-radius: 10px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     width: 100%;
-    max-width: 300px; /* تحديد أقصى عرض للعنصر */
+    max-width: 300px; 
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    padding-bottom: 1px; /* لإضافة مساحة أسفل الرابط */
+    padding-bottom: 1px;
 }
 
 .sport-item:hover {
-    transform: translateY(-5px); /* رفع العنصر قليلاً عند المرور فوقه */
+    transform: translateY(-5px); 
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
 }
 
@@ -51,7 +51,7 @@ header h1 {
 .sport-item img {
     width: 100%;
     height: 200px;
-    object-fit: cover; /* للتأكد من أن الصورة تغطي المساحة دون تشوه */
+    object-fit: cover; 
     display: block;
 }
 
@@ -69,15 +69,15 @@ header h1 {
     line-height: 1.6;
 }
 
-/* تنسيق الرابط الإضافي */
+/* تنسيق الرابط الإضافي (الأزرار الصفراء) */
 .sport-item a.more-info {
-    display: block; /* لجعل الرابط يأخذ سطر كامل */
+    display: block; 
     text-align: center;
     padding: 10px 15px;
     margin: 15px 15px 15px;
     background-color: #ffc107; /* لون أصفر جذاب */
     color: #333;
-    text-decoration: none; /* إزالة الخط تحت النص */
+    text-decoration: none; 
     border-radius: 5px;
     font-weight: bold;
     transition: background-color 0.3s ease;
@@ -86,6 +86,38 @@ header h1 {
 .sport-item a.more-info:hover {
     background-color: #e0a800; /* لون أغمق عند المرور بالماوس */
     color: white;
+}
+
+/* --- تنسيقات صفحات المعلومات (الجديدة: basketball.html, swimming.html, إلخ) --- */
+
+/* لإضافة مسافة داخلية (padding) للعناصر النصية في الصفحات الفرعية */
+main ul {
+    margin-right: 20px;
+    padding-right: 0; 
+    list-style-type: square; /* تنسيق نقاط القائمة */
+}
+
+/* تنسيق العناوين في الصفحات الفرعية */
+main h2, main h3 {
+    color: #0056b3; /* لون أزرق أغمق للعناوين الداخلية */
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 5px;
+    margin-top: 25px;
+}
+
+/* تنسيق الفقرات في الصفحات الفرعية */
+main p {
+    line-height: 1.8;
+    padding: 0; /* إزالة الـ padding من هنا لأننا سنستخدمه في المين */
+    margin: 15px 0;
+}
+
+/* تعديل عرض الرابط "العودة للصفحة الرئيسية" في الصفحات الداخلية */
+.info-page main a.more-info {
+    max-width: 300px;
+    margin-top: 30px;
+    margin-right: 0;
+    margin-left: auto;
 }
 
 /* تنسيق التذييل (Footer) */
