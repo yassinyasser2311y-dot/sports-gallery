@@ -24,24 +24,24 @@ header h1 {
 
 /* --- تنسيق قائمة التنقل (Menu) في الزاوية العلوية اليسرى --- */
 .main-nav {
-    position: absolute; /* لجعل القائمة تخرج من تدفق المستند وتتحرك بحرية */
-    top: 20px; /* مسافة من أعلى الهيدر */
-    left: 20px; /* مسافة من يسار الهيدر */
-    background-color: transparent; /* خلفية شفافة في البداية */
-    z-index: 1000; /* للتأكد من أنها تظهر فوق أي عناصر أخرى */
+    position: absolute; 
+    top: 20px; 
+    left: 20px; 
+    background-color: transparent; 
+    z-index: 1000; 
 }
 
 .main-nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
-    text-align: left; /* محاذاة لليسار داخل القائمة نفسها */
+    text-align: left; 
 }
 
 .main-nav ul li {
-    display: block; /* لعرض العناصر في شكل عمودي (كل عنصر في سطر) */
-    margin-bottom: 5px; /* مسافة بين عناصر القائمة */
-    background-color: rgba(0, 0, 0, 0.7); /* خلفية شبه شفافة للعنصر */
+    display: block; 
+    margin-bottom: 5px; 
+    background-color: rgba(0, 0, 0, 0.7); 
     border-radius: 5px;
 }
 
@@ -49,14 +49,14 @@ header h1 {
     color: white;
     text-decoration: none;
     font-weight: bold;
-    padding: 8px 15px; /* زيادة حجم منطقة الضغط */
-    display: block; /* لكي يأخذ الرابط عرض الـ li بالكامل */
+    padding: 8px 15px; 
+    display: block; 
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .main-nav ul li a:hover {
-    background-color: #ffc107; /* خلفية صفراء عند المرور بالماوس */
-    color: #333; /* لون نص داكن عند المرور بالماوس */
+    background-color: #ffc107; 
+    color: #333; 
 }
 /* ---------------------------------------------------------------- */
 
@@ -115,7 +115,7 @@ header h1 {
     text-align: center;
     padding: 10px 15px;
     margin: 15px 15px 15px;
-    background-color: #ffc107; /* لون أصفر جذاب */
+    background-color: #ffc107; 
     color: #333;
     text-decoration: none; 
     border-radius: 5px;
@@ -128,7 +128,7 @@ header h1 {
     color: white;
 }
 
-/* --- تنسيقات صفحات المعلومات (الجديدة) --- */
+/* --- تنسيقات صفحات المعلومات (الداخلية) --- */
 
 main ul {
     margin-right: 20px;
@@ -154,6 +154,53 @@ main p {
     margin-top: 30px;
     margin-right: 0;
     margin-left: auto;
+}
+
+/* --- تنسيقات الصفحة الرئيسية الترحيبية الجديدة (index.html) --- */
+.welcome-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 50vh; 
+    padding: 30px;
+    text-align: center;
+}
+
+.welcome-box {
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    padding: 40px;
+    max-width: 600px;
+    width: 100%;
+    margin-top: 50px; 
+}
+
+.welcome-box h2 {
+    color: #007bff;
+    font-size: 2.5em; 
+    margin-bottom: 20px;
+    border-bottom: none; 
+}
+
+.welcome-box p {
+    font-size: 1.2em;
+    line-height: 1.8;
+    margin-bottom: 15px;
+    color: #555;
+    padding: 0; 
+}
+
+.welcome-box .welcome-link {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.welcome-box .welcome-link:hover {
+    color: #ffc107;
+    text-decoration: underline;
 }
 
 /* تنسيق التذييل (Footer) */
