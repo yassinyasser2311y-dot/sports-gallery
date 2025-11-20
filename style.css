@@ -61,7 +61,7 @@ header h1 {
 /* ---------------------------------------------------------------- */
 
 
-/* تنسيق معرض الصور (Gallery) */
+/* تنسيق معرض الصور (Gallery) - صفحات Boys و Girls */
 .gallery {
     display: flex;
     flex-wrap: wrap; 
@@ -156,7 +156,7 @@ main p {
     margin-left: auto;
 }
 
-/* --- تنسيقات الصفحة الرئيسية الترحيبية الجديدة (index.html) --- */
+/* --- تنسيقات الصفحة الرئيسية الترحيبية (index.html) --- */
 .welcome-section {
     display: flex;
     justify-content: center;
@@ -210,4 +210,55 @@ footer {
     text-align: center;
     padding: 15px;
     margin-top: 30px;
+}
+
+/* --- التصميم المتجاوب (Responsive Design) --- */
+
+/* هذا الكود سيعمل عندما يكون عرض الشاشة 768 بكسل أو أقل (الهواتف والأجهزة اللوحية) */
+@media (max-width: 768px) {
+    
+    /* جعل المربعات الرياضية (sport-item) تأخذ عرض الشاشة بالكامل */
+    .sport-item {
+        max-width: 90%; 
+        margin-bottom: 20px; 
+    }
+
+    /* توسيع المسافة بين عناصر المعرض في الوضع العمودي */
+    .gallery {
+        gap: 15px; 
+        padding: 15px;
+    }
+
+    /* تحسين شكل الرأس (Header) */
+    header h1 {
+        font-size: 1.5em; 
+        padding-right: 15px; 
+    }
+    
+    /* تحريك قائمة التنقل (Menu) إلى أسفل العنوان مباشرة */
+    .main-nav {
+        position: static; 
+        text-align: center; 
+        background-color: transparent; 
+        padding-top: 10px;
+    }
+    
+    .main-nav ul {
+        display: flex; 
+        flex-direction: column; 
+        align-items: center;
+    }
+    
+    .main-nav ul li {
+        width: 90%; 
+        margin-bottom: 5px;
+    }
+
+    /* تصغير حجم النص في الصفحة الترحيبية */
+    .welcome-box h2 {
+        font-size: 2em; 
+    }
+    .welcome-box p {
+        font-size: 1em;
+    }
 }
