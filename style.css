@@ -15,11 +15,51 @@ header {
     padding: 20px;
     text-align: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative; /* مهم لتمكين تحديد موضع الـ nav داخله */
 }
 
 header h1 {
     margin: 0;
 }
+
+/* --- تنسيق قائمة التنقل (Menu) في الزاوية العلوية اليسرى --- */
+.main-nav {
+    position: absolute; /* لجعل القائمة تخرج من تدفق المستند وتتحرك بحرية */
+    top: 20px; /* مسافة من أعلى الهيدر */
+    left: 20px; /* مسافة من يسار الهيدر */
+    background-color: transparent; /* خلفية شفافة في البداية */
+    z-index: 1000; /* للتأكد من أنها تظهر فوق أي عناصر أخرى */
+}
+
+.main-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: left; /* محاذاة لليسار داخل القائمة نفسها */
+}
+
+.main-nav ul li {
+    display: block; /* لعرض العناصر في شكل عمودي (كل عنصر في سطر) */
+    margin-bottom: 5px; /* مسافة بين عناصر القائمة */
+    background-color: rgba(0, 0, 0, 0.7); /* خلفية شبه شفافة للعنصر */
+    border-radius: 5px;
+}
+
+.main-nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 15px; /* زيادة حجم منطقة الضغط */
+    display: block; /* لكي يأخذ الرابط عرض الـ li بالكامل */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.main-nav ul li a:hover {
+    background-color: #ffc107; /* خلفية صفراء عند المرور بالماوس */
+    color: #333; /* لون نص داكن عند المرور بالماوس */
+}
+/* ---------------------------------------------------------------- */
+
 
 /* تنسيق معرض الصور (Gallery) */
 .gallery {
@@ -84,35 +124,31 @@ header h1 {
 }
 
 .sport-item a.more-info:hover {
-    background-color: #e0a800; /* لون أغمق عند المرور بالماوس */
+    background-color: #e0a800; 
     color: white;
 }
 
-/* --- تنسيقات صفحات المعلومات (الجديدة: basketball.html, swimming.html, إلخ) --- */
+/* --- تنسيقات صفحات المعلومات (الجديدة) --- */
 
-/* لإضافة مسافة داخلية (padding) للعناصر النصية في الصفحات الفرعية */
 main ul {
     margin-right: 20px;
     padding-right: 0; 
-    list-style-type: square; /* تنسيق نقاط القائمة */
+    list-style-type: square; 
 }
 
-/* تنسيق العناوين في الصفحات الفرعية */
 main h2, main h3 {
-    color: #0056b3; /* لون أزرق أغمق للعناوين الداخلية */
+    color: #0056b3; 
     border-bottom: 1px solid #ddd;
     padding-bottom: 5px;
     margin-top: 25px;
 }
 
-/* تنسيق الفقرات في الصفحات الفرعية */
 main p {
     line-height: 1.8;
-    padding: 0; /* إزالة الـ padding من هنا لأننا سنستخدمه في المين */
+    padding: 0; 
     margin: 15px 0;
 }
 
-/* تعديل عرض الرابط "العودة للصفحة الرئيسية" في الصفحات الداخلية */
 .info-page main a.more-info {
     max-width: 300px;
     margin-top: 30px;
