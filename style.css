@@ -15,7 +15,7 @@ header {
     padding: 20px;
     text-align: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    position: relative; /* مهم لتمكين تحديد موضع الـ nav داخله */
+    position: relative; 
 }
 
 header h1 {
@@ -189,6 +189,15 @@ main p {
     margin-bottom: 15px;
     color: #555;
     padding: 0; 
+}
+
+/* تنسيق لكلمات التشويق الجديدة */
+.welcome-box .excitement-text {
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #ffc107; /* اللون الأصفر للمزيد من الجذب */
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 
 .welcome-box .welcome-link {
