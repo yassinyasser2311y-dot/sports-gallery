@@ -159,6 +159,7 @@ main p {
 /* --- تنسيقات الصفحة الرئيسية الترحيبية (index.html) --- */
 .welcome-section {
     display: flex;
+    flex-direction: column; /* جعل العناصر تترتب عمودياً */
     justify-content: center;
     align-items: center;
     min-height: 50vh; 
@@ -212,6 +213,49 @@ main p {
     text-decoration: underline;
 }
 
+/* --- تنسيق قسم فوائد الرياضة (Benefits Section) --- */
+.benefits-section {
+    background-color: #e9ecef; /* خلفية رمادية فاتحة لتمييز القسم */
+    border-radius: 10px;
+    padding: 25px;
+    max-width: 600px;
+    width: 100%;
+    margin-top: 30px; /* مسافة من الصندوق الترحيبي */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    text-align: right;
+}
+
+.benefits-section h3 {
+    color: #28a745; /* لون أخضر جذاب */
+    font-size: 1.8em;
+    border-bottom: 2px solid #28a745;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+.benefits-section ul {
+    list-style-type: none; /* إزالة التنقيط الافتراضي */
+    padding-right: 0;
+}
+
+.benefits-section ul li {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    padding-right: 25px; /* مسافة للرموز */
+    position: relative;
+    line-height: 1.5;
+}
+
+.benefits-section ul li::before {
+    content: "✅"; /* رمز علامة صح */
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 1.2em;
+    color: #28a745;
+}
+
+
 /* تنسيق التذييل (Footer) */
 footer {
     background-color: #333;
@@ -263,11 +307,17 @@ footer {
         margin-bottom: 5px;
     }
 
-    /* تصغير حجم النص في الصفحة الترحيبية */
+    /* تصغير حجم النص في الصفحة الترحيبية والفوائد */
     .welcome-box h2 {
         font-size: 2em; 
     }
     .welcome-box p {
+        font-size: 1em;
+    }
+    .benefits-section h3 {
+        font-size: 1.5em;
+    }
+    .benefits-section ul li {
         font-size: 1em;
     }
 }
