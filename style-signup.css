@@ -1,0 +1,192 @@
+/* هذا الملف مخصص لتصميم صفحة التسجيل (Sign Up) فقط */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    /* تغيير الاتجاه إلى RTL */
+    direction: rtl; 
+    text-align: right; 
+    
+    /* الخلفية الجذابة */
+    background: linear-gradient(to bottom, #d18b52, #1b2f46);
+    height: 100vh;
+    color: #fff;
+    overflow-y: auto; /* للسماح بالتمرير إذا كان المحتوى أكبر من الشاشة */
+}
+
+/* ---------- NAVBAR ---------- */
+header {
+    width: 100%;
+    padding: 20px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav a {
+    margin: 0 15px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #ffd700; /* تغيير اللون عند المرور لتناسق مع الذهب */
+}
+
+.auth-buttons button {
+    margin-right: 10px; /* تعديل الهامش لـ RTL */
+    margin-left: 0; 
+    padding: 10px 22px;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn-light {
+    background: #ffffff50;
+    color: #fff;
+}
+
+.btn-dark {
+    background: #ffffff80;
+    color: #333; /* لتمييز زر التسجيل */
+    font-weight: bold;
+}
+
+/* ---------- FORM SECTION ---------- */
+.form-section {
+    width: 100%;
+    max-width: 550px;
+    /* لتوسيط العنصر في وضع RTL */
+    margin: 40px auto; 
+    padding: 0 20px;
+    text-align: center;
+}
+
+.login-text {
+    margin-bottom: 10px;
+}
+
+.login-text a {
+    color: #ffd700; /* لون ذهبي للرابط */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.form-section h2 {
+    margin-bottom: 25px;
+    font-size: 32px;
+}
+
+form {
+    text-align: right; /* محاذاة عناصر الفورم لليمين */
+}
+
+.two-cols {
+    display: flex;
+    gap: 10px;
+}
+
+.input-box {
+    display: flex;
+    align-items: center;
+    background: #ffffff50;
+    margin: 10px 0;
+    padding: 12px 18px;
+    border-radius: 30px;
+    width: 100%; /* للتوافق مع two-cols */
+}
+
+.input-box .icon {
+    margin-left: 10px; /* تعديل الهامش لـ RTL */
+    margin-right: 0;
+}
+
+.input-box input {
+    width: 100%;
+    border: none;
+    background: transparent;
+    outline: none;
+    color: #fff;
+    font-size: 16px;
+    /*Placeholder color*/
+    &::placeholder {
+        color: #fffa;
+    }
+}
+
+.register-btn {
+    width: 100%;
+    padding: 12px;
+    background: #ffffff; /* لون أبيض صريح للزر الأساسي */
+    border: none;
+    border-radius: 30px;
+    margin-top: 15px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    color: #1b2f46; /* لون داكن يتناسب مع الخلفية */
+    transition: background 0.3s;
+}
+
+.register-btn:hover {
+    background: #ffd700; /* لون ذهبي عند المرور */
+}
+
+.bottom-links {
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+}
+
+.bottom-links input[type="checkbox"] {
+    margin-left: 5px;
+}
+
+.bottom-links a.terms {
+    color: #fff;
+    text-decoration: underline;
+    transition: color 0.3s;
+}
+
+.bottom-links a.terms:hover {
+    color: #ffd700;
+}
+
+/* --- Responsive Design for small screens --- */
+@media (max-width: 768px) {
+    header {
+        padding: 15px 20px;
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    nav {
+        margin: 10px 0;
+    }
+
+    .two-cols {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .bottom-links {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+}
