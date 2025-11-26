@@ -1,323 +1,233 @@
-/* تنسيق عام */
+/* تنسيقات عامة */
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f9;
+    background-color: #f4f4f4;
     color: #333;
-    text-align: right; /* محاذاة النص لليمين للغة العربية */
+    direction: rtl; /* دعم اللغة العربية */
+    text-align: right;
 }
 
-/* تنسيق الرأس (Header) */
+a {
+    text-decoration: none;
+    color: #007bff;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #0056b3;
+}
+
+/* الترويسة والتنقل */
 header {
-    background-color: #007bff;
-    color: white;
-    padding: 20px;
+    background-color: #1b2f46; /* لون داكن مناسب */
+    color: #fff;
+    padding: 20px 0;
     text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    position: relative; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 header h1 {
-    margin: 0;
-}
-
-/* --- تنسيق قائمة التنقل (Menu) في الزاوية العلوية اليسرى --- */
-.main-nav {
-    position: absolute; 
-    top: 20px; 
-    left: 20px; 
-    background-color: transparent; 
-    z-index: 1000; 
+    margin-bottom: 10px;
+    font-size: 28px;
 }
 
 .main-nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
-    text-align: left; 
-}
-
-.main-nav ul li {
-    display: block; 
-    margin-bottom: 5px; 
-    background-color: rgba(0, 0, 0, 0.7); 
-    border-radius: 5px;
-}
-
-.main-nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    padding: 8px 15px; 
-    display: block; 
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.main-nav ul li a:hover {
-    background-color: #ffc107; 
-    color: #333; 
-}
-/* ---------------------------------------------------------------- */
-
-
-/* تنسيق معرض الصور (Gallery) - صفحات Boys و Girls */
-.gallery {
     display: flex;
-    flex-wrap: wrap; 
-    justify-content: center; 
-    gap: 30px; 
-    padding: 30px;
+    justify-content: center;
+    gap: 25px;
 }
 
-/* تنسيق كل عنصر رياضي (المربعات البيضاء) */
-.sport-item {
-    background-color: white;
+.main-nav a {
+    color: #fff;
+    font-weight: bold;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.main-nav a:hover {
+    background-color: #d18b52; /* لون برتقالي دافئ عند المرور */
+    color: #fff;
+}
+
+/* تخطيط الصفحة الرئيسية */
+main {
+    padding: 20px;
+}
+
+.hero {
+    background-color: #d18b52; /* لون برتقالي خلفي */
+    color: #fff;
+    padding: 40px;
+    margin-bottom: 20px;
     border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.hero h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.benefits h2, .gallery h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #1b2f46;
+    border-bottom: 2px solid #d18b52;
+    padding-bottom: 5px;
+}
+
+.benefits-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.benefit-item {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    width: calc(50% - 10px);
+    text-align: center;
+}
+
+.benefit-item h3 {
+    color: #d18b52;
+    margin-top: 0;
+}
+
+/* تنسيقات صفحات المعرض (boys.html, girls.html) */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    padding: 20px 0;
+}
+
+.sport-item {
+    background-color: #fff;
+    border-radius: 10px;
     overflow: hidden;
-    width: 100%;
-    max-width: 300px; 
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    padding-bottom: 1px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
 }
 
 .sport-item:hover {
-    transform: translateY(-5px); 
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
-/* تنسيق الصور داخل العناصر */
 .sport-item img {
     width: 100%;
     height: 200px;
-    object-fit: cover; 
-    display: block;
+    object-fit: cover;
 }
 
-/* تنسيق محتوى النص */
 .sport-item h2 {
-    color: #007bff;
-    padding: 10px 15px 5px;
-    margin: 0;
-    border-bottom: 2px solid #007bff;
+    color: #1b2f46;
+    margin: 15px 10px 5px;
+    font-size: 22px;
 }
 
 .sport-item p {
-    padding: 0 15px;
-    margin: 0;
-    line-height: 1.6;
+    padding: 0 10px 15px;
+    font-size: 14px;
+    color: #666;
 }
 
-/* تنسيق الرابط الإضافي (الأزرار الصفراء) */
-.sport-item a.more-info {
-    display: block; 
+.more-info {
+    display: block;
+    background-color: #1b2f46;
+    color: #fff;
     text-align: center;
-    padding: 10px 15px;
-    margin: 15px 15px 15px;
-    background-color: #ffc107; 
-    color: #333;
-    text-decoration: none; 
-    border-radius: 5px;
+    padding: 10px;
     font-weight: bold;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s;
 }
 
-.sport-item a.more-info:hover {
-    background-color: #e0a800; 
-    color: white;
+.more-info:hover {
+    background-color: #d18b52;
 }
 
-/* --- تنسيقات صفحات المعلومات (الداخلية) --- */
-
-main ul {
-    margin-right: 20px;
-    padding-right: 0; 
-    list-style-type: square; 
-}
-
-main h2, main h3 {
-    color: #0056b3; 
-    border-bottom: 1px solid #ddd;
-    padding-bottom: 5px;
-    margin-top: 25px;
-}
-
-main p {
-    line-height: 1.8;
-    padding: 0; 
-    margin: 15px 0;
-}
-
-.info-page main a.more-info {
-    max-width: 300px;
-    margin-top: 30px;
-    margin-right: 0;
-    margin-left: auto;
-}
-
-/* --- تنسيقات الصفحة الرئيسية الترحيبية (index.html) --- */
-.welcome-section {
-    display: flex;
-    flex-direction: column; /* جعل العناصر تترتب عمودياً */
-    justify-content: center;
-    align-items: center;
-    min-height: 50vh; 
+/* تنسيقات صفحات المعلومات الفردية (info-page) */
+.info-page main {
+    max-width: 900px;
+    margin: 20px auto;
+    background-color: #fff;
     padding: 30px;
-    text-align: center;
-}
-
-.welcome-box {
-    background-color: white;
-    border-radius: 15px;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-    padding: 40px;
-    max-width: 600px;
-    width: 100%;
-    margin-top: 50px; 
-}
-
-.welcome-box h2 {
-    color: #007bff;
-    font-size: 2.5em; 
-    margin-bottom: 20px;
-    border-bottom: none; 
-}
-
-.welcome-box p {
-    font-size: 1.2em;
-    line-height: 1.8;
-    margin-bottom: 15px;
-    color: #555;
-    padding: 0; 
-}
-
-/* تنسيق لكلمات التشويق الجديدة */
-.welcome-box .excitement-text {
-    font-size: 1.1em;
-    font-weight: bold;
-    color: #ffc107; /* اللون الأصفر للمزيد من الجذب */
-    margin-top: 5px;
-    margin-bottom: 5px;
-}
-
-.welcome-box .welcome-link {
-    color: #007bff;
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s ease;
-}
-
-.welcome-box .welcome-link:hover {
-    color: #ffc107;
-    text-decoration: underline;
-}
-
-/* --- تنسيق قسم فوائد الرياضة (Benefits Section) --- */
-.benefits-section {
-    background-color: #e9ecef; /* خلفية رمادية فاتحة لتمييز القسم */
     border-radius: 10px;
-    padding: 25px;
-    max-width: 600px;
-    width: 100%;
-    margin-top: 30px; /* مسافة من الصندوق الترحيبي */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.info-page main img {
+    margin-bottom: 20px;
+}
+
+.info-page h2 {
+    color: #d18b52;
+    border-bottom: 2px solid #1b2f46;
+    padding-bottom: 5px;
+    margin-top: 30px;
+}
+
+.info-page ul {
+    list-style: disc inside;
+    margin: 15px 0 20px 20px;
     text-align: right;
 }
 
-.benefits-section h3 {
-    color: #28a745; /* لون أخضر جذاب */
-    font-size: 1.8em;
-    border-bottom: 2px solid #28a745;
-    padding-bottom: 10px;
-    margin-bottom: 15px;
+.info-page ul li {
+    margin-bottom: 8px;
 }
 
-.benefits-section ul {
-    list-style-type: none; /* إزالة التنقيط الافتراضي */
-    padding-right: 0;
-}
-
-.benefits-section ul li {
-    font-size: 1.1em;
-    margin-bottom: 10px;
-    padding-right: 25px; /* مسافة للرموز */
-    position: relative;
-    line-height: 1.5;
-}
-
-.benefits-section ul li::before {
-    content: "✅"; /* رمز علامة صح */
-    position: absolute;
-    right: 0;
-    top: 0;
-    font-size: 1.2em;
-    color: #28a745;
-}
-
-
-/* تنسيق التذييل (Footer) */
+/* التذييل */
 footer {
-    background-color: #333;
-    color: white;
+    background-color: #1b2f46;
+    color: #fff;
     text-align: center;
-    padding: 15px;
-    margin-top: 30px;
+    padding: 15px 0;
+    margin-top: 20px;
+    font-size: 14px;
 }
 
-/* --- التصميم المتجاوب (Responsive Design) --- */
-
-/* هذا الكود سيعمل عندما يكون عرض الشاشة 768 بكسل أو أقل (الهواتف والأجهزة اللوحية) */
+/* التصميم المتجاوب (Responsive Design) */
 @media (max-width: 768px) {
-    
-    /* جعل المربعات الرياضية (sport-item) تأخذ عرض الشاشة بالكامل */
-    .sport-item {
-        max-width: 90%; 
-        margin-bottom: 20px; 
+    header {
+        padding: 15px 0;
     }
 
-    /* توسيع المسافة بين عناصر المعرض في الوضع العمودي */
-    .gallery {
-        gap: 15px; 
-        padding: 15px;
-    }
-
-    /* تحسين شكل الرأس (Header) */
     header h1 {
-        font-size: 1.5em; 
-        padding-right: 15px; 
+        font-size: 24px;
     }
-    
-    /* تحريك قائمة التنقل (Menu) إلى أسفل العنوان مباشرة */
-    .main-nav {
-        position: static; 
-        text-align: center; 
-        background-color: transparent; 
+
+    .main-nav ul {
+        flex-direction: column;
+        gap: 10px;
         padding-top: 10px;
     }
-    
-    .main-nav ul {
-        display: flex; 
-        flex-direction: column; 
-        align-items: center;
-    }
-    
-    .main-nav ul li {
-        width: 90%; 
-        margin-bottom: 5px;
+
+    .benefits-grid {
+        flex-direction: column;
     }
 
-    /* تصغير حجم النص في الصفحة الترحيبية والفوائد */
-    .welcome-box h2 {
-        font-size: 2em; 
+    .benefit-item {
+        width: 100%;
     }
-    .welcome-box p {
-        font-size: 1em;
+
+    .info-page main {
+        padding: 20px;
+        margin: 10px;
     }
-    .benefits-section h3 {
-        font-size: 1.5em;
-    }
-    .benefits-section ul li {
-        font-size: 1em;
+
+    .gallery {
+        grid-template-columns: 1fr;
+        gap: 20px;
     }
 }
